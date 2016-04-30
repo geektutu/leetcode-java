@@ -1,5 +1,5 @@
 ### 基本类库
-```
+```java
 import java.io.*;  
 import java.util.*;  
 import java.math.*; 
@@ -8,7 +8,7 @@ import java.math.*;
 > 参考：[java在ACM中的使用](http://blog.csdn.net/sssogs/article/details/8526384)
 
 ### 读取数据
-```
+```java
 Scanner cin=new Scanner(System.in);  
 // 或  Scanner cin=new Scanner(new BufferedInputStream(System.in));  
 int n;  
