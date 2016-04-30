@@ -10,8 +10,9 @@ import java.math.*;
 ### 读取数据
 ```
 Scanner cin=new Scanner(System.in);  
+// 或  Scanner cin=new Scanner(new BufferedInputStream(System.in));  
 int n;  
-n=cin.nextInt();  
+n = cin.nextInt();  
 System.out.println(n);  
 ```
 
@@ -22,3 +23,12 @@ System.out.println("Hello,ACM"); //自带换行符
 System.out.print(n);  // 不带换行符
 ```
 
+### 标准输入输出重定向
+```java
+// 获取当前类所在的路径
+FirstApp.class.getResource("/").getFile()
+// 输入(System.in)重定向到文件
+System.setIn(new FileInputStream("filePath"));
+// 输出(System.out)重定向到文件
+System.setOut(new PrintStream(new FileOutputStream("filePath")));
+```
