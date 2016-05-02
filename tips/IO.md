@@ -1,3 +1,5 @@
+# Java算法技巧——输入输出类
+
 ### 基本类库
 ```java
 import java.io.*;  

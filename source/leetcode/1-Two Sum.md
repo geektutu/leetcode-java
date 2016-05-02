@@ -3,12 +3,15 @@
 > Given an array of integers, return indices of the two numbers such that they add up to a specific target. <br/>
 > You may assume that each input would have exactly one solution.
 
+题目大意：给定一个数组，和一个目标值，找出数组中相加恰好等于目标值的2个数的下标，结果只有1个
+
 ```java
 import java.util.Arrays;
 /**
  * Created by gzdaijie on 16/5/1.
  * 从大到小排序，首先将首尾相加，首尾指针start，end初始化为0， len-1
  * 如果和小于目标值，++start，大于目标值，--end
+ * 复杂度 O(NlgN)
  */
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
