@@ -1,4 +1,4 @@
-### 题目来源[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+### [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 > There are two sorted arrays nums1 and nums2 of size m and n respectively. <br/>
 > Find the median of the two sorted arrays. <br/>
