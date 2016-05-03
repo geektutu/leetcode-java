@@ -25,3 +25,16 @@ String s = "abc"
 String sub = s.substring(1, 3); // => "bc"
 sub = s.substring(1,2); // => "b"，(start,end)，start->end-1，不包含end
 ```
+
+### 分割
+```java
+public String[] split(String regex, int limit)
+public String[] split(String regex)
+
+String s = "ab-bc-cd-de"
+String[] str = s.split("-") // => ["ab", "bc", "cd", "de"]
+str = s.split("-", 2) // => ["ab","bc-cd-de"], 分割为2段，
+str = s.split("-", 1) // => ["ab-bc-cd-de"]，1->不分割，0->全分割
+```
+
+> 参考：[java split](http://www.tutorialspoint.com/java/java_string_split.htm)
