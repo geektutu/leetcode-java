@@ -4,12 +4,15 @@
 ```java
 String s = "123";
 int value = Integer.parseInt(s); // => 123
+value = Integer.valueOf(s) // => 123
 ```
 
 ### 数字转字符串
 ```java
 int value = 123;
 String s = Integer.toString(value); // => "123"
+s = String.valueOf(value); // => "123"
+s = "" + value // => "123"
 ```
 
 ### 字符串，转字符（数组）
@@ -17,6 +20,13 @@ String s = Integer.toString(value); // => "123"
 String s = "abc";
 char[] chars = s.toCharArray(); // => ['a','b','c']
 chars[2] == s.charAt(2) // => true
+```
+
+### 字符数组转字符串
+```java
+char[] a = {'1', '2', '3'};
+String str = String.valueOf(result); // 调用valueOf方法
+str = new String(result);  // 构造函数转换
 ```
 
 ### 子串 
