@@ -25,8 +25,8 @@ chars[2] == s.charAt(2) // => true
 ### 字符数组转字符串
 ```java
 char[] a = {'1', '2', '3'};
-String str = String.valueOf(result); // 调用valueOf方法
-str = new String(result);  // 构造函数转换
+String str = String.valueOf(a); // => "123" 调用valueOf方法
+str = new String(a);  // => "123" 构造函数转换
 ```
 
 ### 子串 
