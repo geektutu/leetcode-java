@@ -1,7 +1,7 @@
 # Java算法技巧——栈
 
 ### 标准库（java.util.Stack）
-```
+```java
 Stack<Character> stack = new Stack<Character>(); // => 泛型需要指定类型
 stack.isEmpty(); // => true 判断是否为空
 stack.empty();   // => true，在java中的实现为判断stack.size()是否为0
