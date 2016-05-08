@@ -48,3 +48,17 @@ str = s.split("-", 1) // => ["ab-bc-cd-de"]，1->不分割，0->全分割
 ```
 
 > 参考：[java split](http://www.tutorialspoint.com/java/java_string_split.htm)
+
+### 查找
+```java
+// 查找返回位置
+String str = "abcdecdedf"
+str.indexOf("cde") // => 2
+str.indexOf("xyz") // => -1
+str.lastIndexOf("cde") // => 5，从后往前
+// 仅判断是否存在
+str.contains("cde") // => true
+str.contains("xyz") // => false
+```
+
+
