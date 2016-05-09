@@ -1,5 +1,7 @@
 # Java算法技巧——字符串类
 
+## String
+
 ### 字符串转数字
 ```java
 String s = "123";
@@ -61,5 +63,28 @@ str.lastIndexOf("cde") // => 5，从后往前
 str.contains("cde") // => true
 str.contains("xyz") // => false
 ```
+
+## StringBuilder
+> String提供的字符串增删改功能不完善，且效率较低，StringBuilder提供了十分高效的方法
+
+### StringBuilder常用方法
+
+```
+StringBuilder result = new StringBuilder();
+char[] chars = {'a', 'b', 'c', 'd', 'e'};
+// 尾部添加
+result.append(1);  // => "1"，自动将数字转为字符，不需要额外操作
+result.append('2');  // => "12"，参数可以是 String, char[],double,int,char等
+result.append(chars, 2, 2); // => "12cd"，append(chars[], offset, count),后2个参数可选
+// 删除
+result.delete(1,2);   // => "1cd", delete(start, end),不含end 
+result.deleteCharAt(1);  // => "1d"
+// 插入
+result.insert(0, "abc"); // => "abc1d" // 在某个位置前插入char[]，String，int等
+// 修改
+result.setCharAt(1, 'B'); // => "aBc1d" // 修改
+result.setLength(3);  // => "aBc"，后面的字符将被删除 
+```
+
 
 
