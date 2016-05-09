@@ -8,6 +8,8 @@
 - [字符 IO](./tips/Char.md)
 - [字符串 String](./tips/String.md)
 - [数学 Math](./tips/Math.md)
+- [栈 Stack](./tips/Stack.md)
+- [队列 Queue](./tips/Queue.md)
 
 ## LeetCode
 
