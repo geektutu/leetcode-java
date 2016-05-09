@@ -69,7 +69,7 @@ str.contains("xyz") // => false
 
 ### StringBuilder常用方法
 
-```
+```java
 StringBuilder result = new StringBuilder();
 char[] chars = {'a', 'b', 'c', 'd', 'e'};
 // 尾部添加
