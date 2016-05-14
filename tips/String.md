@@ -64,6 +64,11 @@ str.contains("cde") // => true
 str.contains("xyz") // => false
 ```
 
+### 去除行首行末空格
+```java
+String str = "   hello  ".trim() // => "hello"
+```
+
 ## StringBuilder
 > String提供的字符串增删改功能不完善，且效率较低，StringBuilder提供了十分高效的方法
 
