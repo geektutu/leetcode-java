@@ -15,5 +15,5 @@ tmp = result.get(1);  // => 3，返回该位置值
 tmp = result.set(0, 5); // => [5, 3]， 设置
 tmp = result.remove(0);  // =>  5，删除并返回该位置值
 result.clear();  // =>  清空
-arr = result.toArray();  // => [5, 3]，转换为数组
 ```
+
