@@ -10,6 +10,7 @@
 - [数学 Math](./tips/Math.md)
 - [栈 Stack](./tips/Stack.md)
 - [队列 Queue](./tips/Queue.md)
+- [哈希表 HashMap](./tips/HashMap.md)
 
 ## LeetCode
 
