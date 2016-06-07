@@ -15,6 +15,7 @@ Queue<Integer> queue = new PriorityQueue<>(10, new Comparator<Integer>() {
 });
 queue.add(5);
 queue.add(3);
+queue.offer(4); // 推荐使用offer而非add，poll而非remove，成否与否返回布尔值，不会抛异常
 queue.peek(); // => 5，取栈顶元素
 queue.poll(); // => 5，出队并返回栈顶元素
 ```
