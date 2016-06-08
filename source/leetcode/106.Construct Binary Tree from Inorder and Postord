@@ -1,0 +1,36 @@
+106.Construct Binary Tree from Inorder and Postorder Traversal.md
+
+> Given inorder and postorder traversal of a tree, construct the binary tree. <br/>
+> Note: You may assume that duplicates do not exist in the tree.
+
+题目大意：根据中序和后序遍历，构造二叉树
+
+题目难度：Medium
+
+```java
+import java.util.*;
+/**
+ * Created by gzdaijie on 16/6/7
+ */
+public class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        return buildTreeHelper(inorder, 0, postorder, 0, inorder.length);
+    }
+
+    private TreeNode buildTreeHelper(int[] inorder, int index1, int[] postorder, int index2, int len) {
+        if (len == 0) return null;
+
+        int num = postorder[index2 + len - 1];
+        int count = 0;
+        TreeNode root = new TreeNode(num);
+
+        for (int i = 0; i < len; i++) {
+            if (inorder[index1 + i] == num) break;
+            count++;
+        }
+        root.left = buildTreeHelper(inorder, index1, postorder, index2, count);
+        root.right = buildTreeHelper(inorder, index1 + count + 1, postorder, index2 + count, len - count - 1);
+        return root;
+    }
+}
+```
