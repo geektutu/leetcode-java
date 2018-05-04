@@ -1,0 +1,1829 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>93.Restore IP Addresses · Leetcode java 算法题</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="94.Binary Tree Inorder Traversal.html" />
+    
+    
+    <link rel="prev" href="92.Reverse Linked List II.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"gzdaijie","repo":"leetcode-java","type":"star","size":"large"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://geektutu.com/series" target="_blank" class="custom-link">geektutu的主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/gzdaijie/leetcode-java" target="_blank" class="custom-link">Leetcode Java算法练习</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Leetcode练习题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.Two Sum.html">
+            
+                <a href="1.Two Sum.html">
+            
+                    
+                    1.Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.Add Two Numbers.html">
+            
+                <a href="2.Add Two Numbers.html">
+            
+                    
+                    2.Add Two Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.Longest Substring Without Repeating Characters.html">
+            
+                <a href="3.Longest Substring Without Repeating Characters.html">
+            
+                    
+                    3.Longest Substring Without Repeating Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.Median of Two Sorted Arrays.html">
+            
+                <a href="4.Median of Two Sorted Arrays.html">
+            
+                    
+                    4.Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.Longest Palindromic Substring.html">
+            
+                <a href="5.Longest Palindromic Substring.html">
+            
+                    
+                    5.Longest Palindromic Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.ZigZag Conversion.html">
+            
+                <a href="6.ZigZag Conversion.html">
+            
+                    
+                    6.ZigZag Conversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.Reverse Integer.html">
+            
+                <a href="7.Reverse Integer.html">
+            
+                    
+                    7.Reverse Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.String to Integer (atoi">
+            
+                <span>
+            
+                    
+                    8.String to Integer (atoi)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="9.Palindrome Number.html">
+            
+                <a href="9.Palindrome Number.html">
+            
+                    
+                    9.Palindrome Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="11.Container With Most Water.html">
+            
+                <a href="11.Container With Most Water.html">
+            
+                    
+                    11.Container With Most Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="13.Roman to Integer.html">
+            
+                <a href="13.Roman to Integer.html">
+            
+                    
+                    13.Roman to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="14.Longest Common Prefix.html">
+            
+                <a href="14.Longest Common Prefix.html">
+            
+                    
+                    14.Longest Common Prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="15.3Sum.html">
+            
+                <a href="15.3Sum.html">
+            
+                    
+                    15.3Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="16.3Sum Closest.html">
+            
+                <a href="16.3Sum Closest.html">
+            
+                    
+                    16.3Sum Closest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="17.Letter Combinations of a Phone Number.html">
+            
+                <a href="17.Letter Combinations of a Phone Number.html">
+            
+                    
+                    17.Letter Combinations of a Phone Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="18.4Sum.html">
+            
+                <a href="18.4Sum.html">
+            
+                    
+                    18.4Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="19.Remove Nth Node From End of List.html">
+            
+                <a href="19.Remove Nth Node From End of List.html">
+            
+                    
+                    19.Remove Nth Node From End of List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="20.Valid Parentheses.html">
+            
+                <a href="20.Valid Parentheses.html">
+            
+                    
+                    20.Valid Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="21.Merge Two Sorted Lists.html">
+            
+                <a href="21.Merge Two Sorted Lists.html">
+            
+                    
+                    21.Merge Two Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="22.Generate Parentheses.html">
+            
+                <a href="22.Generate Parentheses.html">
+            
+                    
+                    22.Generate Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="23.Merge k Sorted Lists.html">
+            
+                <a href="23.Merge k Sorted Lists.html">
+            
+                    
+                    23.Merge k Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="24.Swap Nodes in Pairs.html">
+            
+                <a href="24.Swap Nodes in Pairs.html">
+            
+                    
+                    24.Swap Nodes in Pairs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="26.Remove Duplicates from Sorted Array.html">
+            
+                <a href="26.Remove Duplicates from Sorted Array.html">
+            
+                    
+                    26.Remove Duplicates from Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="27.Remove Element.html">
+            
+                <a href="27.Remove Element.html">
+            
+                    
+                    27.Remove Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="28.Implement strStr(">
+            
+                <span>
+            
+                    
+                    28.Implement strStr()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="31.Next Permutation.html">
+            
+                <a href="31.Next Permutation.html">
+            
+                    
+                    31.Next Permutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="34.Search for a Range.html">
+            
+                <a href="34.Search for a Range.html">
+            
+                    
+                    34.Search for a Range
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="35.Search Insert Position.html">
+            
+                <a href="35.Search Insert Position.html">
+            
+                    
+                    35.Search Insert Position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="36.Valid Sudoku.html">
+            
+                <a href="36.Valid Sudoku.html">
+            
+                    
+                    36.Valid Sudoku
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.30" data-path="38.Count and Say.html">
+            
+                <a href="38.Count and Say.html">
+            
+                    
+                    38.Count and Say
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.31" data-path="39.Combination Sum.html">
+            
+                <a href="39.Combination Sum.html">
+            
+                    
+                    39.Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.32" data-path="40.Combination Sum II.html">
+            
+                <a href="40.Combination Sum II.html">
+            
+                    
+                    40.Combination Sum II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.33" data-path="41.First Missing Positive.html">
+            
+                <a href="41.First Missing Positive.html">
+            
+                    
+                    41.First Missing Positive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.34" data-path="42.Trapping Rain Water.html">
+            
+                <a href="42.Trapping Rain Water.html">
+            
+                    
+                    42.Trapping Rain Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.35" data-path="43.Multiply Strings.html">
+            
+                <a href="43.Multiply Strings.html">
+            
+                    
+                    43.Multiply Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.36" data-path="46.Permutations.html">
+            
+                <a href="46.Permutations.html">
+            
+                    
+                    46.Permutations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.37" data-path="47.Permutations II.html">
+            
+                <a href="47.Permutations II.html">
+            
+                    
+                    47.Permutations II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.38" data-path="48.Rotate Image.html">
+            
+                <a href="48.Rotate Image.html">
+            
+                    
+                    48.Rotate Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.39" data-path="49.Group Anagrams.html">
+            
+                <a href="49.Group Anagrams.html">
+            
+                    
+                    49.Group Anagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.40" data-path="50.Pow(x, n">
+            
+                <span>
+            
+                    
+                    50.Pow(x, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.41" data-path="53.Maximum Subarray.html">
+            
+                <a href="53.Maximum Subarray.html">
+            
+                    
+                    53.Maximum Subarray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.42" data-path="54.Spiral Matrix.html">
+            
+                <a href="54.Spiral Matrix.html">
+            
+                    
+                    54.Spiral Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.43" data-path="55.Jump Game.html">
+            
+                <a href="55.Jump Game.html">
+            
+                    
+                    55.Jump Game
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.44" data-path="58.Length of Last Word.html">
+            
+                <a href="58.Length of Last Word.html">
+            
+                    
+                    58.Length of Last Word
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.45" data-path="59.Spiral Matrix II.html">
+            
+                <a href="59.Spiral Matrix II.html">
+            
+                    
+                    59.Spiral Matrix II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.46" data-path="60.Permutation Sequence.html">
+            
+                <a href="60.Permutation Sequence.html">
+            
+                    
+                    60.Permutation Sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.47" data-path="61.Rotate List.html">
+            
+                <a href="61.Rotate List.html">
+            
+                    
+                    61.Rotate List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.48" data-path="62.Unique Paths.html">
+            
+                <a href="62.Unique Paths.html">
+            
+                    
+                    62.Unique Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.49" data-path="63.Unique Paths II.html">
+            
+                <a href="63.Unique Paths II.html">
+            
+                    
+                    63.Unique Paths II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.50" data-path="64.Minimum Path Sum.html">
+            
+                <a href="64.Minimum Path Sum.html">
+            
+                    
+                    64.Minimum Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.51" data-path="66.Plus One.html">
+            
+                <a href="66.Plus One.html">
+            
+                    
+                    66.Plus One
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.52" data-path="67. Add Binary.html">
+            
+                <a href="67. Add Binary.html">
+            
+                    
+                    67. Add Binary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.53" data-path="69.Sqrt(x">
+            
+                <span>
+            
+                    
+                    69.Sqrt(x)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.54" data-path="70.Climbing Stairs.html">
+            
+                <a href="70.Climbing Stairs.html">
+            
+                    
+                    70.Climbing Stairs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.55" data-path="71.Simplify Path.html">
+            
+                <a href="71.Simplify Path.html">
+            
+                    
+                    71.Simplify Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.56" data-path="73.Set Matrix Zeroes.html">
+            
+                <a href="73.Set Matrix Zeroes.html">
+            
+                    
+                    73.Set Matrix Zeroes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.57" data-path="74.Search a 2D Matrix.html">
+            
+                <a href="74.Search a 2D Matrix.html">
+            
+                    
+                    74.Search a 2D Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.58" data-path="75.Sort Colors.html">
+            
+                <a href="75.Sort Colors.html">
+            
+                    
+                    75.Sort Colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.59" data-path="77.Combinations.html">
+            
+                <a href="77.Combinations.html">
+            
+                    
+                    77.Combinations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.60" data-path="78.Subsets.html">
+            
+                <a href="78.Subsets.html">
+            
+                    
+                    78.Subsets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.61" data-path="79.Word Search.html">
+            
+                <a href="79.Word Search.html">
+            
+                    
+                    79.Word Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.62" data-path="80.Remove Duplicates from Sorted Array II.html">
+            
+                <a href="80.Remove Duplicates from Sorted Array II.html">
+            
+                    
+                    80.Remove Duplicates from Sorted Array II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.63" data-path="82.Remove Duplicates from Sorted List II.html">
+            
+                <a href="82.Remove Duplicates from Sorted List II.html">
+            
+                    
+                    82.Remove Duplicates from Sorted List II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.64" data-path="83.Remove Duplicates from Sorted List.html">
+            
+                <a href="83.Remove Duplicates from Sorted List.html">
+            
+                    
+                    83.Remove Duplicates from Sorted List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.65" data-path="86.Partition List.html">
+            
+                <a href="86.Partition List.html">
+            
+                    
+                    86.Partition List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.66" data-path="88.Merge Sorted Array.html">
+            
+                <a href="88.Merge Sorted Array.html">
+            
+                    
+                    88.Merge Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.67" data-path="89.Gray Code.html">
+            
+                <a href="89.Gray Code.html">
+            
+                    
+                    89.Gray Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.68" data-path="90.Subsets II.html">
+            
+                <a href="90.Subsets II.html">
+            
+                    
+                    90.Subsets II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.69" data-path="91.Decode Ways.html">
+            
+                <a href="91.Decode Ways.html">
+            
+                    
+                    91.Decode Ways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.70" data-path="92.Reverse Linked List II.html">
+            
+                <a href="92.Reverse Linked List II.html">
+            
+                    
+                    92.Reverse Linked List II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.71" data-path="93.Restore IP Addresses.html">
+            
+                <a href="93.Restore IP Addresses.html">
+            
+                    
+                    93.Restore IP Addresses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.72" data-path="94.Binary Tree Inorder Traversal.html">
+            
+                <a href="94.Binary Tree Inorder Traversal.html">
+            
+                    
+                    94.Binary Tree Inorder Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.73" data-path="96.Unique Binary Search Trees.html">
+            
+                <a href="96.Unique Binary Search Trees.html">
+            
+                    
+                    96.Unique Binary Search Trees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.74" data-path="98.Validate Binary Search Tree.html">
+            
+                <a href="98.Validate Binary Search Tree.html">
+            
+                    
+                    98.Validate Binary Search Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.75" data-path="100.Same Tree.html">
+            
+                <a href="100.Same Tree.html">
+            
+                    
+                    100.Same Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.76" data-path="101.Symmetric Tree.html">
+            
+                <a href="101.Symmetric Tree.html">
+            
+                    
+                    101.Symmetric Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.77" data-path="102.Binary Tree Level Order Traversal.html">
+            
+                <a href="102.Binary Tree Level Order Traversal.html">
+            
+                    
+                    102.Binary Tree Level Order Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.78" data-path="103.Binary Tree Zigzag Level Order Traversal.html">
+            
+                <a href="103.Binary Tree Zigzag Level Order Traversal.html">
+            
+                    
+                    103.Binary Tree Zigzag Level Order Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.79" data-path="104.Maximum Depth of Binary Tree.html">
+            
+                <a href="104.Maximum Depth of Binary Tree.html">
+            
+                    
+                    104.Maximum Depth of Binary Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.80" data-path="105.Construct Binary Tree from Preorder and Inorder.html">
+            
+                <a href="105.Construct Binary Tree from Preorder and Inorder.html">
+            
+                    
+                    105.Construct Binary Tree from Preorder and Inorder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.81" data-path="106.Construct Binary Tree from Inorder and Postord.html">
+            
+                <a href="106.Construct Binary Tree from Inorder and Postord.html">
+            
+                    
+                    106.Construct Binary Tree from Inorder and Postord
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.82" data-path="107.Binary Tree Level Order Traversal II.html">
+            
+                <a href="107.Binary Tree Level Order Traversal II.html">
+            
+                    
+                    107.Binary Tree Level Order Traversal II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.83" data-path="108.Convert Sorted Array to Binary Search Tree.html">
+            
+                <a href="108.Convert Sorted Array to Binary Search Tree.html">
+            
+                    
+                    108.Convert Sorted Array to Binary Search Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.84" data-path="109.Convert Sorted List to Binary Search Tree.html">
+            
+                <a href="109.Convert Sorted List to Binary Search Tree.html">
+            
+                    
+                    109.Convert Sorted List to Binary Search Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.85" data-path="110.Balanced Binary Tree.html">
+            
+                <a href="110.Balanced Binary Tree.html">
+            
+                    
+                    110.Balanced Binary Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.86" data-path="111.Minimum Depth of Binary Tree.html">
+            
+                <a href="111.Minimum Depth of Binary Tree.html">
+            
+                    
+                    111.Minimum Depth of Binary Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.87" data-path="112.Path Sum.html">
+            
+                <a href="112.Path Sum.html">
+            
+                    
+                    112.Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.88" data-path="113.Path Sum II.html">
+            
+                <a href="113.Path Sum II.html">
+            
+                    
+                    113.Path Sum II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.89" data-path="114.Flatten Binary Tree to Linked List.html">
+            
+                <a href="114.Flatten Binary Tree to Linked List.html">
+            
+                    
+                    114.Flatten Binary Tree to Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.90" data-path="116.Populating Next Right Pointers in Each Node.html">
+            
+                <a href="116.Populating Next Right Pointers in Each Node.html">
+            
+                    
+                    116.Populating Next Right Pointers in Each Node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.91" data-path="117.Populating Next Right Pointers in Each Node II.html">
+            
+                <a href="117.Populating Next Right Pointers in Each Node II.html">
+            
+                    
+                    117.Populating Next Right Pointers in Each Node II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.92" data-path="118.Pascal's Triangle.html">
+            
+                <a href="118.Pascal's Triangle.html">
+            
+                    
+                    118.Pascal's Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.93" data-path="119.Pascal's Triangle II.html">
+            
+                <a href="119.Pascal's Triangle II.html">
+            
+                    
+                    119.Pascal's Triangle II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.94" data-path="120.Triangle.html">
+            
+                <a href="120.Triangle.html">
+            
+                    
+                    120.Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.95" data-path="121.Best Time to Buy and Sell Stock.html">
+            
+                <a href="121.Best Time to Buy and Sell Stock.html">
+            
+                    
+                    121.Best Time to Buy and Sell Stock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.96" data-path="122.Best Time to Buy and Sell Stock II.html">
+            
+                <a href="122.Best Time to Buy and Sell Stock II.html">
+            
+                    
+                    122.Best Time to Buy and Sell Stock II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.97" data-path="125.Valid Palindrome.html">
+            
+                <a href="125.Valid Palindrome.html">
+            
+                    
+                    125.Valid Palindrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.98" data-path="129.Sum Root to Leaf Numbers.html">
+            
+                <a href="129.Sum Root to Leaf Numbers.html">
+            
+                    
+                    129.Sum Root to Leaf Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.99" data-path="136.Single Number.html">
+            
+                <a href="136.Single Number.html">
+            
+                    
+                    136.Single Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.100" data-path="137.Single Number II.html">
+            
+                <a href="137.Single Number II.html">
+            
+                    
+                    137.Single Number II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.101" data-path="141.Linked List Cycle.html">
+            
+                <a href="141.Linked List Cycle.html">
+            
+                    
+                    141.Linked List Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.102" data-path="169.Majority Element.html">
+            
+                <a href="169.Majority Element.html">
+            
+                    
+                    169.Majority Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.103" data-path="344.Reverse String.html">
+            
+                <a href="344.Reverse String.html">
+            
+                    
+                    344.Reverse String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Java类库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../tips/Array.html">
+            
+                <a href="../../tips/Array.html">
+            
+                    
+                    1. Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../tips/Char.html">
+            
+                <a href="../../tips/Char.html">
+            
+                    
+                    2. Char
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../tips/HashMap.html">
+            
+                <a href="../../tips/HashMap.html">
+            
+                    
+                    3. HashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../tips/IO.html">
+            
+                <a href="../../tips/IO.html">
+            
+                    
+                    4. IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../tips/List.html">
+            
+                <a href="../../tips/List.html">
+            
+                    
+                    5. List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../tips/Math.html">
+            
+                <a href="../../tips/Math.html">
+            
+                    
+                    6. Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../tips/Queue.html">
+            
+                <a href="../../tips/Queue.html">
+            
+                    
+                    7. Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../tips/Stack.html">
+            
+                <a href="../../tips/Stack.html">
+            
+                    
+                    8. Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../tips/String.html">
+            
+                <a href="../../tips/String.html">
+            
+                    
+                    9. String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >93.Restore IP Addresses</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="restore-ip-addresses"><a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank">Restore IP Addresses</a></h3>
+<blockquote>
+<p>Given a string containing only digits,  <br>
+restore it by returning all possible valid IP address combinations. <br>
+For example: <br>
+Given &quot;25525511135&quot;, <br>
+return [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]. (Order does not matter)</p>
+</blockquote>
+<p>&#x9898;&#x76EE;&#x5927;&#x610F;&#xFF1A;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x4EE3;&#x8868;&#x65E0;&apos;.&apos;&#x9694;&#x5F00;&#x7684;ip&#x5730;&#x5740;&#xFF0C;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x4EE3;&#x8868;&#x7684;&#x6709;&#x6548;&#x7684;IP&#x5730;&#x5740;&#x7EC4;&#x5408;</p>
+<p>&#x9898;&#x76EE;&#x96BE;&#x5EA6;&#xFF1A;Medium</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/**
+ * Created by gzdaijie on 16/6/5
+ * dfs&#x9700;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;,&#x5047;&#x5B9A;&#x5DF2;&#x786E;&#x5B9A;&#x4F4D;&#x6570;k, &#x5F85;&#x786E;&#x5B9A; 4 - k
+ * (1) &#x5269;&#x4F59;&#x7684;&#x957F;&#x5EA6;&#x5E94;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; (4 - k) * 3
+ * (2) &#x6BCF;&#x4F4D;&#x6570;&#x503C;&#x9700;&#x8981;&#x5C0F;&#x4E8E; 255
+ * (3) &#x6BCF;&#x4E00;&#x4F4D;&#x9664;&#x4E86;0&#x5916;,&#x4E0D;&#x80FD;&#x4EE5;0&#x5F00;&#x5934;
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> result<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token function">restoreIpAddresses</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+
+        String<span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">ipAddressesDfs</span><span class="token punctuation">(</span>tmp<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">,</span> s<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ipAddressesDfs</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> tmp<span class="token punctuation">,</span> <span class="token keyword">int</span> index<span class="token punctuation">,</span> String s<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            result<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tmp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;.&quot;</span> <span class="token operator">+</span> tmp<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;.&quot;</span> <span class="token operator">+</span> tmp<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;.&quot;</span> <span class="token operator">+</span> tmp<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">int</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> sum<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">3</span> <span class="token operator">&amp;&amp;</span> k <span class="token operator">+</span> j <span class="token operator">&lt;=</span> len<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// &#x5269;&#x4F59;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7; 3 * (3 - index), index&#x4ECE;0&#x5F00;&#x59CB;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">-</span> k <span class="token operator">-</span> j <span class="token operator">&gt;</span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">-</span> index<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span> 
+
+            tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> k <span class="token operator">+</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sum <span class="token operator">=</span> Integer<span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">&gt;</span> <span class="token number">255</span> <span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// &#x4E0D;&#x80FD;&#x5927;&#x4E8E;255</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">!=</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">&apos;0&apos;</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// j &gt; 1,&#x4E0D;&#x80FD;&#x4EE5;0&#x5F00;&#x5934;</span>
+
+            <span class="token function">ipAddressesDfs</span><span class="token punctuation">(</span>tmp<span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">,</span> k <span class="token operator">+</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/gzdaijie" target="_blank">gzdaijie</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <strong>updated</strong> 2016-06-05 17:10:05 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="92.Reverse Linked List II.html" class="navigation navigation-prev " aria-label="Previous page: 92.Reverse Linked List II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="94.Binary Tree Inorder Traversal.html" class="navigation navigation-next " aria-label="Next page: 94.Binary Tree Inorder Traversal">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"93.Restore IP Addresses","level":"1.2.71","depth":2,"next":{"title":"94.Binary Tree Inorder Traversal","level":"1.2.72","depth":2,"path":"source/leetcode/94.Binary Tree Inorder Traversal.md","ref":"source/leetcode/94.Binary Tree Inorder Traversal.md","articles":[]},"previous":{"title":"92.Reverse Linked List II","level":"1.2.70","depth":2,"path":"source/leetcode/92.Reverse Linked List II.md","ref":"source/leetcode/92.Reverse Linked List II.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","expandable-chapters","splitter","page-footer-ex","prism","github","github-buttons","sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/gzdaijie/leetcode-java"},"page-footer-ex":{"copyright":"[gzdaijie](https://github.com/gzdaijie)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<strong>updated</strong>"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://gzdaijie.github.io/leetcode-java/"},"fontsettings":{"theme":"white","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"gzdaijie","repo":"leetcode-java","type":"star","size":"large"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Leetcode java 算法题","language":"zh-hans","output.name":"site","links":{"sidebar":{"geektutu的主页":"https://geektutu.com/series","Leetcode Java算法练习":"https://github.com/gzdaijie/leetcode-java"}},"gitbook":"*","description":"Leetcode java 算法题"},"file":{"path":"source/leetcode/93.Restore IP Addresses.md","mtime":"2016-06-05T09:10:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-04T17:15:31.602Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
