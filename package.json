@@ -1,0 +1,22 @@
+{
+  "name": "leetcode-java",
+  "version": "1.0.0",
+  "description": "leetcode java exercise",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gzdaijie/leetcode-java.git"
+  },
+  "author": "gzdaijie@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gzdaijie/leetcode-java/issues"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}
