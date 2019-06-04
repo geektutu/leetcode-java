@@ -15,6 +15,6 @@
 ## 关于
 
 - Leetcode地址: [https://leetcode.com/problemset/algorithms](https://leetcode.com/problemset/algorithms/)
-- Github地址: [https://github.com/geektutu/leetcode-java](https://github.com/gzdaijie/leetcode-java)
-- Gitbook地址: [https://geektutu.github.io/leetcode-java/](https://gzdaijie.github.io/leetcode-java/)
+- Github地址: [https://github.com/geektutu/leetcode-java](https://github.com/geektutu/leetcode-java)
+- Gitbook地址: [https://geektutu.github.io/leetcode-java/](https://geektutu.github.io/leetcode-java/)
 - 极客兔兔的小站: [https://geektutu.com](https://geektutu.com/series)
